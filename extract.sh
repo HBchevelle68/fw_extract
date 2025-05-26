@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Logging functions with Unicode symbols
+# I'm lazy and i like colors...
 COLOR_INFO="\033[34m"    # Blue
 COLOR_ERROR="\033[31m"   # Red
 COLOR_SUCCESS="\033[32m" # Green
@@ -96,9 +97,9 @@ target_name="${firmware_name%.*}_output"
 target_path="$output_dir/$target_name"
 
 print_info "Moving output to: %s" "$target_path"
-mv /opt/DumprX/out "$target_path"
 
-print_info "Changing ownership to UID:GID 1000:1000 recursively"
+# Typical user accounts are UID 1000 on Linux
+mv /opt/DumprX/out "$target_path"
 chown -R 1000:1000 "$target_path"
 
 print_success "Output moved and ownership updated."

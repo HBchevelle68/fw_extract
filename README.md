@@ -14,7 +14,7 @@ This repository builds a Docker image based on Ubuntu that installs and runs the
 ## Requirements
 
 - [Docker](https://docs.docker.com/get-docker/) installed on your system
-- [DumprX repository](https://github.com/DumprX/DumprX)
+- [DumprX](https://github.com/DumprX/DumprX)
 
 ## Build 
 There is a simple `Makefile` that has the build and run commands for you. First build the basse image
